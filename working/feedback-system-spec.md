@@ -33,7 +33,12 @@ working/
       proces-beskrivelse.docx
 ```
 
-Mappenavn: tidsstempel `{YYYY-MM-DD-HHmmss}`
+Mappe: `working/feedback/{YYYY-MM-DD-HHmmss}/`
+
+Fordele ved `working/feedback/`:
+- Holder rod-mappen ren
+- `working/` er allerede ekskluderet fra MkDocs build og deploy workflow
+- Feedback er "arbejdsmateriale" der behandles og slettes
 
 ---
 
