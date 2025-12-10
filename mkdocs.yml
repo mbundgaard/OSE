@@ -5,31 +5,89 @@ site_url: https://ose.muneris.dk
 theme:
   name: material
   language: da
+  logo: assets/images/logo.png
+  favicon: assets/images/logo.png
+
   palette:
-    primary: indigo
-    accent: indigo
+    # Light mode
+    - scheme: default
+      primary: custom
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Skift til mørkt tema
+    # Dark mode
+    - scheme: slate
+      primary: custom
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Skift til lyst tema
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
   features:
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
+    - navigation.top
+    - navigation.footer
     - search.suggest
     - search.highlight
+    - search.share
+    - content.tabs.link
+    - toc.follow
+
+  icon:
+    repo: fontawesome/brands/github
 
 plugins:
   - search:
       lang: da
 
 nav:
-  - Oversigt: index.md
-  - Afdelinger:
-    - Konference: konference/index.md
-    - Messe: messe/index.md
-    - Event: event/index.md
-    - Hotel Odense: hotel-odense/index.md
-    - F&B: fb/index.md
-    - Økonomi: oekonomi/index.md
+  - Hjem: index.md
+  - Konference: konference/index.md
+  - Messe: messe/index.md
+  - Event: event/index.md
+  - Hotel Odense: hotel-odense/index.md
+  - F&B: fb/index.md
+  - Økonomi: oekonomi/index.md
 
 markdown_extensions:
   - tables
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - toc:
       permalink: true
+      title: På denne side
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.ose.dk
+      name: OSE Website
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: "&copy; 2025 Odense Sport & Event A/S"

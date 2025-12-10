@@ -1,0 +1,245 @@
+/* OSE Vidensbank - Custom Styling */
+/* Farver baseret på OSE logo (orange/gylden flamme) kombineret med professionel blå */
+
+:root {
+  /* Primary colors - warm orange from logo */
+  --md-primary-fg-color: #1a365d;
+  --md-primary-fg-color--light: #2c5282;
+  --md-primary-fg-color--dark: #0d1b2a;
+
+  /* Accent - matches logo flame */
+  --md-accent-fg-color: #dd6b20;
+  --md-accent-fg-color--transparent: #dd6b2033;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1a365d;
+  --md-primary-fg-color--light: #2c5282;
+  --md-accent-fg-color: #ed8936;
+}
+
+/* Header styling */
+.md-header {
+  background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+}
+
+/* Logo sizing */
+.md-header__button.md-logo img {
+  height: 32px;
+  width: auto;
+}
+
+/* Navigation tabs */
+.md-tabs {
+  background: linear-gradient(135deg, #0d1b2a 0%, #1a365d 100%);
+}
+
+/* Links */
+.md-typeset a {
+  color: #2b6cb0;
+}
+
+.md-typeset a:hover {
+  color: #dd6b20;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: #63b3ed;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #ed8936;
+}
+
+/* Cards for homepage */
+.grid-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 0.5rem 0;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.grid-card:hover {
+  border-color: #dd6b20;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+[data-md-color-scheme="slate"] .grid-card {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+[data-md-color-scheme="slate"] .grid-card:hover {
+  border-color: #ed8936;
+}
+
+.grid-card h3 {
+  margin-top: 0;
+  color: #1a365d;
+}
+
+[data-md-color-scheme="slate"] .grid-card h3 {
+  color: #63b3ed;
+}
+
+.grid-card p {
+  margin-bottom: 0;
+  color: #4a5568;
+}
+
+[data-md-color-scheme="slate"] .grid-card p {
+  color: #a0aec0;
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* Admonitions - styled to match brand */
+.md-typeset .admonition.info,
+.md-typeset details.info {
+  border-color: #2b6cb0;
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: #dd6b20;
+}
+
+.md-typeset .admonition.tip > .admonition-title,
+.md-typeset details.tip > summary {
+  background-color: rgba(221, 107, 32, 0.1);
+}
+
+/* Hero section for homepage */
+.hero {
+  background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #dd6b20 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  color: white;
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.draft {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.review {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-badge.complete {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* Tables - better styling */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.md-typeset table:not([class]) th {
+  background: #1a365d;
+  color: white;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background: #2c5282;
+}
+
+/* Footer */
+.md-footer {
+  background: #0d1b2a;
+}
+
+/* Search highlight */
+.md-search-result mark {
+  background: rgba(221, 107, 32, 0.3);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better code blocks */
+.md-typeset code {
+  border-radius: 4px;
+}
+
+/* Timeline styling for project overview */
+.timeline {
+  border-left: 3px solid #dd6b20;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.75rem;
+  top: 0.25rem;
+  width: 12px;
+  height: 12px;
+  background: #dd6b20;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.timeline-item h4 {
+  margin: 0 0 0.25rem 0;
+  color: #1a365d;
+}
+
+[data-md-color-scheme="slate"] .timeline-item h4 {
+  color: #63b3ed;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #4a5568;
+}
+
+[data-md-color-scheme="slate"] .timeline-item p {
+  color: #a0aec0;
+}
