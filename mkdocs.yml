@@ -58,9 +58,8 @@ nav:
   - Hotel Odense: hotel-odense/index.md
   - F&B: fb/index.md
   - Økonomi: oekonomi/index.md
-  - Ændringslog: aendringslog/index.md
-  - Links: links.md
   - Kontakt: kontakt.md
+  - Ændringslog: aendringslog/index.md
 
 markdown_extensions:
   - tables
@@ -90,9 +89,6 @@ extra:
     - icon: fontawesome/solid/globe
       link: https://www.ose.dk
       name: OSE Website
-    - icon: fontawesome/solid/envelope
-      link: mailto:martin@muneris.dk
-      name: Kontakt projektleder
   generator: false
 
 extra_css:
