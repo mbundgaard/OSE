@@ -48,7 +48,8 @@ Vidensbanken publiceres til: https://ose.muneris.dk
 ├── working/               # Arbejdsdokumenter (publiceres IKKE)
 │   ├── transcripts/       # Mødetransskriptioner
 │   ├── interviews/        # Interview-noter
-│   └── meeting-notes/     # Mødereferater
+│   ├── meeting-notes/     # Mødereferater
+│   └── feedback/          # Feedback fra brugere (behandles og slettes)
 ├── mkdocs.yml             # MkDocs konfiguration
 ├── CLAUDE.md              # Denne fil (ignoreres af git)
 └── .github/workflows/     # Automatisk deploy
@@ -90,6 +91,32 @@ Dokumenterne opdateres løbende baseret på:
 - Bevar struktur og overskrifter
 - Tilføj kilde nederst (f.eks. "Møde 26. november 2025")
 - Marker usikker information med "afventer bekræftelse" eller lignende
+
+## Feedback system
+
+Brugere kan indsende feedback via widget på vidensbanken. Feedback gemmes automatisk i repo.
+
+### Mappestruktur
+```
+working/feedback/
+  2025-12-10-143022/
+    feedback.md      # Indeholder: url, navn, emne, kommentar
+    screenshot.png   # Vedhæftede filer
+```
+
+### Behandling af feedback
+1. Få email-notifikation med feedback ID
+2. `git pull` for at hente ny feedback
+3. Bed Claude Code behandle: `Behandl feedback 2025-12-10-143022`
+4. Claude læser `feedback.md` og eventuelle vedhæftede filer
+5. Review ændringer, commit og push
+6. Slet feedback-mappen når behandlet
+
+### Teknisk setup
+- Widget: `overrides/js/feedback-widget.js`
+- Azure Function: `working/code/Feedback/`
+- Endpoint: `https://osefeedback.azurewebsites.net/api/feedback`
+- Spec: `working/feedback-system-spec.md`
 
 ## Vigtige begreber
 
