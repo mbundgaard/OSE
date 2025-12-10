@@ -2,16 +2,16 @@
 
 ## Om projektet
 
-Dette er en vidensbank for Odense Sport & Event (OS&E) projektet. Formålet er at dokumentere arbejdsgange og processer som grundlag for implementering af Oracle Opera Cloud (PMS) og Oracle Simphony (POS).
+Dette er en vidensbank for Odense Sport & Event (OS&E) projektet. Formålet er at dokumentere arbejdsgange og processer som grundlag for implementering af nyt PMS og POS.
 
-Vidensbanken publiceres til GitHub Pages: https://mbundgaard.github.io/OSE/
+Vidensbanken publiceres til: https://ose.muneris.dk
 
 ## Projektparter
 
 | Part | Rolle | Ansvar |
 |------|-------|--------|
-| Muneris | Konsulent | POS (Oracle Simphony), procesanalyse, tovholder på vidensbank |
-| HotelToolz | Konsulent | PMS (Oracle Opera Cloud) |
+| Muneris | Konsulent | POS/F&B, procesanalyse, tovholder på vidensbank |
+| HotelToolz | Konsulent | PMS |
 | Oracle | Leverandør | Licenser |
 | OCC/OS&E | Kunde | Styregruppe, ressourcer |
 
@@ -20,7 +20,7 @@ Vidensbanken publiceres til GitHub Pages: https://mbundgaard.github.io/OSE/
 - **Kristine Weigand** - HotelToolz
 - **Martin Bundgaard** - Muneris
 - **Lone Palm** - OCC
-- **Tom** - OCC
+- **Tom Cludts** - OCC (Revenue Manager)
 
 ## Scope
 
@@ -97,11 +97,8 @@ Dokumenterne opdateres løbende baseret på:
 |--------|------------|
 | OS&E | Odense Sport & Event A/S - koncernen |
 | OCC | Odense Congress Center |
-| Picasso | Nuværende PMS-system |
-| Picanto | System til køresedler og kontrakter |
+| Picasso | Nuværende PMS-system (booking, køresedler) |
 | Mews | PMS på Hotel Odeon (Strawberry-franchise) |
-| Opera Cloud | Nyt PMS-system fra Oracle |
-| Simphony | Nyt POS-system fra Oracle |
 | Projektmanual | Word-dokument der beskriver et arrangement (bruges af messe) |
 | Køreseddel | Operationel instruks til personale |
 
