@@ -1,0 +1,35 @@
+site_name: OCC Vidensbank
+site_description: Dokumentation af arbejdsgange og processer for Odense Congress Center
+site_url: https://example.github.io/occ-vidensbank/
+
+theme:
+  name: material
+  language: da
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search:
+      lang: da
+
+nav:
+  - Oversigt: index.md
+  - Afdelinger:
+    - Konference: konference/index.md
+    - Messe: messe/index.md
+    - Event: event/index.md
+    - Hotel Odense: hotel-odense/index.md
+    - F&B: fb/index.md
+    - Økonomi: oekonomi/index.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - toc:
+      permalink: true
