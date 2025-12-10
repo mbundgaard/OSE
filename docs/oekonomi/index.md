@@ -29,7 +29,7 @@ tags:
 
 ### Fakturering
 - For messe: Økonomi sender fakturaer (via C5)
-- For konference: Projektleder sender selv faktura (via Picanto)
+- For konference: Projektleder sender selv faktura (via Picasso)
 
 ### Rapportering
 - Samler manuelt data fra forskellige systemer

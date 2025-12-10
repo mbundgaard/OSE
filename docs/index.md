@@ -6,6 +6,11 @@
 
 </div>
 
+!!! tip "Hjælp os med at forbedre dokumentationen"
+    Denne vidensbank er under løbende udvikling. Vi opfordrer alle projektdeltagere til at bidrage med feedback - både rettelser til eksisterende indhold og forslag til nye emner.
+
+    Brug **Feedback**-knappen i højre side af skærmen.
+
 ## Om Odense Sport & Event
 
 Odense Sport & Event A/S (OSE) blev stiftet i 2006 som en fusion mellem Odense Congress Center A/S og Odense Boldklub A/S. Koncernen omfatter i dag:
@@ -79,7 +84,7 @@ Fakturering, regnskab og økonomirapportering.
 
 | Afdeling | System | Anvendelse |
 |----------|--------|------------|
-| Konference/Event | Picasso + Picanto | Booking, køresedler, kontrakter |
+| Konference/Event | Picasso + Word | Booking, køresedler, kontrakter |
 | Messe | C5 + Word + Picasso | Fakturering, projektmanualer, lokalebooking |
 | Hotel Odeon | Mews + Salesforce | PMS og CRM (franchise-krav) |
 | Hotel Odense | Picasso | PMS |

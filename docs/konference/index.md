@@ -3,7 +3,6 @@ tags:
   - konference
   - booking
   - Picasso
-  - Picanto
   - køresedler
   - tilbud
 ---
@@ -16,8 +15,8 @@ Konferenceafdelingen sidder sammen med Event og håndterer booking og afvikling 
 
 ## Nuværende systemer
 
-- **Picasso** - Booking af lokaler og ressourcer
-- **Picanto** - Køresedler og kontrakter (digital signatur)
+- **Picasso** - Booking af lokaler og ressourcer, køresedler
+- **Word** - Kontrakter
 
 ## Bemanding
 
@@ -30,16 +29,16 @@ Ca. 8 medarbejdere (sidder sammen med Event).
 ### Booking og tilbud
 - Modtager forespørgsler
 - Udarbejder tilbud
-- Sender kontrakt via Picanto med digital signatur
+- Sender kontrakt via Word
 
 ### Planlægning
-- Opretter køresedler i Picanto
+- Opretter køresedler i Picasso
 - Koordinerer med FB omkring forplejning
 - Koordinerer med Hotel Odense/Odeon omkring værelser
 
 ### Fakturering
 - Projektleder sender selv faktura efter arrangement
-- Fakturering sker via Picanto/Picasso
+- Fakturering sker via Picasso
 
 ## Snitflader
 
@@ -52,5 +51,5 @@ Ca. 8 medarbejdere (sidder sammen med Event).
 ## Kendte udfordringer
 
 - Når arrangementer involverer både konference og messe, er der uklarhed om ansvar (f.eks. hvem bestiller ekstra stole)
-- Personale skal konsultere både køresedler (fra Picanto) og projektmanualer (fra Messe)
+- Personale skal konsultere både køresedler (fra Picasso) og projektmanualer (fra Messe)
 

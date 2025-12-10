@@ -48,7 +48,6 @@ theme:
 plugins:
   - search:
       lang: da
-  - tags
 
 nav:
   - Hjem: index.md

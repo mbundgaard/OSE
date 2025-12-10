@@ -4,7 +4,7 @@ tags:
   - fest
   - arrangement
   - Picasso
-  - Picanto
+  - køresedler
 ---
 
 # Event
@@ -15,8 +15,8 @@ Eventafdelingen håndterer events både internt i OCC og eksternt (f.eks. fester
 
 ## Nuværende systemer
 
-- **Picasso** - Booking
-- **Picanto** - Køresedler og kontrakter
+- **Picasso** - Booking og køresedler
+- **Word** - Kontrakter
 
 ## Bemanding
 
@@ -28,12 +28,12 @@ Del af de ca. 8 medarbejdere der sidder sammen med Konference.
 
 ### Interne events
 - Events i OCC's lokaler
-- Håndteres via Picasso/Picanto ligesom konferencer
+- Håndteres via Picasso ligesom konferencer
 
 ### Eksterne events
 - Events uden for huset (slotte, lokationer på Fyn)
 - Ligger under konferenceafdelingen
-- Faktureres via Picanto
+- Faktureres via Picasso
 
 ### Support til messe
 - Leverer "pynt og gøgl" til messer

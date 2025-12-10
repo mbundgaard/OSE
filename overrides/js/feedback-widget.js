@@ -61,7 +61,7 @@
                   id="feedback-comment"
                   name="comment"
                   class="feedback-textarea"
-                  placeholder="Beskriv din feedback, forslag eller problem her..."
+                  placeholder="Hjælp os med at forbedre dokumentationen - del dine forslag, rettelser eller idéer til nyt indhold..."
                   required
                   aria-required="true"
                 ></textarea>
