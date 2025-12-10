@@ -21,6 +21,7 @@ Vidensbanken publiceres til: https://ose.muneris.dk
 - **Martin Bundgaard** - Muneris
 - **Lone Palm** - OCC
 - **Tom Cludts** - OCC (Revenue Manager)
+- **Carsten Wolff** - Restaurantchef, Restaurant Odense
 
 ## Scope
 
@@ -89,7 +90,7 @@ Dokumenterne opdateres løbende baseret på:
 ### Når du opdaterer dokumentation
 - Læs eksisterende indhold først
 - Bevar struktur og overskrifter
-- Tilføj kilde nederst (f.eks. "Møde 26. november 2025")
+- Opdater Ændringslog side (se eksisterende logs først)
 - Marker usikker information med "afventer bekræftelse" eller lignende
 
 ## Feedback system
@@ -122,9 +123,11 @@ working/feedback/
 
 | Begreb | Forklaring |
 |--------|------------|
-| OS&E | Odense Sport & Event A/S - koncernen |
+| OSE | Odense Sport & Event A/S - koncernen |
 | OCC | Odense Congress Center |
-| Picasso | Nuværende PMS-system (booking, køresedler) |
+| Smag & Smil | Cateringselskab opkøbt 2016, driver F&B-operationen |
+| Picasso | Nuværende PMS-system (booking, køresedler) + POS-modul til restaurant |
+| EventPOS | Nuværende POS til events og messer (ikke integreret med Picasso) |
 | Mews | PMS på Hotel Odeon (Strawberry-franchise) |
 | Projektmanual | Word-dokument der beskriver et arrangement (bruges af messe) |
 | Køreseddel | Operationel instruks til personale |

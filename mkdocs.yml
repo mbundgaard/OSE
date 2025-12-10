@@ -54,10 +54,12 @@ nav:
   - Messe: messe/index.md
   - Event: event/index.md
   - Hotel Odense: hotel-odense/index.md
-  - F&B: fb/index.md
+  - F&B:
+    - Oversigt: fb/index.md
+    - Nuværende setup: fb/nuvaerende-setup.md
   - Økonomi: oekonomi/index.md
   - Kontakt: kontakt.md
-  - Ændringslog: aendringslog/index.md
+  - Kilder: aendringslog/index.md
 
 markdown_extensions:
   - tables
