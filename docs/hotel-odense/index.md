@@ -17,11 +17,6 @@ Hotel Odense er et Best Western Plus hotel med 109 værelser, beliggende ved Ode
 
 - **Picasso** - PMS
 
-## Planlagte systemer
-
-- **Oracle Opera Cloud** - Nyt PMS
-- **Oracle Simphony** - POS (FB)
-
 ## Kendte processer
 
 *Afventer detaljeret kortlægning*

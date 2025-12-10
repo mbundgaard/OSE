@@ -118,7 +118,7 @@ Opstart konfiguration
 <div class="timeline-item" markdown>
 
 #### Januar 2027
-Go-live Oracle Opera Cloud & Simphony
+Go-live nyt PMS og POS
 
 </div>
 

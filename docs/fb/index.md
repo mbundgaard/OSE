@@ -18,10 +18,6 @@ F&B-afdelingen håndterer forplejning til konferencer, messer, events samt resta
 
 *Afventer kortlægning*
 
-## Planlagte systemer
-
-- **Oracle Simphony** - POS
-
 ## Bemanding
 
 Ny F&B-chef ansættes (december 2025). Vedkommende har erfaring med systemer og interesse for det område.

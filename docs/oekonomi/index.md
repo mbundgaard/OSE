@@ -48,5 +48,5 @@ tags:
 
 ## Anbefaling fra mødet
 
-Fakturering bør ske i det system der kender arrangementet (Opera), ikke i økonomi. Økonomi bør fokusere på bogføring, kontoafstemning og indbetalinger.
+Fakturering bør ske i det system der kender arrangementet (nyt PMS), ikke i økonomi. Økonomi bør fokusere på bogføring, kontoafstemning og indbetalinger.
 
