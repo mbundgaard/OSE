@@ -11,7 +11,7 @@ tags:
 
 Denne side beskriver F&B-afdelingens nuværende systemer og tekniske begrænsninger.
 
-## Restaurant Odense
+## Restaurant
 
 Restauranten fungerer som flerbrugsfacilitet:
 
