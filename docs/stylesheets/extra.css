@@ -21,7 +21,21 @@
 
 /* Header styling */
 .md-header {
-  background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+  background: var(--md-default-bg-color);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.md-header__title {
+  color: #1a365d;
+}
+
+.md-header__button {
+  color: #1a365d;
+}
+
+[data-md-color-scheme="slate"] .md-header__title,
+[data-md-color-scheme="slate"] .md-header__button {
+  color: #ffffff;
 }
 
 /* Logo sizing */

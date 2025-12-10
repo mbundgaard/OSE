@@ -1,10 +1,8 @@
-# OSE Vidensbank
+# Vidensbank
 
 <div class="hero" markdown>
 
 ## Dokumentation af arbejdsgange og processer
-
-Grundlag for implementering af Oracle Opera Cloud og Oracle Simphony hos OSE
 
 </div>
 
