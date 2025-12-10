@@ -1,3 +1,13 @@
+---
+tags:
+  - F&B
+  - restaurant
+  - forplejning
+  - catering
+  - POS
+  - Simphony
+---
+
 # F&B
 
 ## Oversigt
@@ -36,6 +46,3 @@ Ny F&B-chef ansættes (december 2025). Vedkommende har erfaring med systemer og 
 - Har manglet en leder med "flair for systemer"
 - Uklarhed om ansvar (f.eks. allergen-kort - er det restaurantchef, køkkenchef eller tilfældigt?)
 
-## Kilder
-
-- Møde 26. november 2025

@@ -1,3 +1,12 @@
+---
+tags:
+  - hotel
+  - Best Western
+  - værelser
+  - reception
+  - PMS
+---
+
 # Hotel Odense
 
 ## Oversigt
@@ -38,6 +47,3 @@ Hotel Odense er et Best Western Plus hotel med 109 værelser, beliggende ved Ode
 
 Med udvidelsen til 557 værelser bliver Hotel Odense mere selvforsynende og mindre afhængig af at sprede gæster på mange hoteller i byen. Hoteldelen bliver "vigtigere end kongres" ifølge Lone.
 
-## Kilder
-
-- Møde 26. november 2025

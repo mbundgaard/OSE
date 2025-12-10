@@ -1,3 +1,12 @@
+---
+tags:
+  - event
+  - fest
+  - arrangement
+  - Picasso
+  - Picanto
+---
+
 # Event
 
 ## Oversigt
@@ -40,6 +49,3 @@ Del af de ca. 8 medarbejdere der sidder sammen med Konference.
 
 - Samme som konference - uklarhed ved krydsende arrangementer
 
-## Kilder
-
-- Møde 26. november 2025

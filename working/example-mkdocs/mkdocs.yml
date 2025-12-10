@@ -1,0 +1,89 @@
+site_name: Muneris Mobile Ordering Documentation
+site_url: https://docs.muneris.app
+site_description: Documentation for restaurant operators using the Muneris Mobile Ordering platform with Oracle Simphony POS integration
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-,:!=\[\]()"|\/]+|(?!\s)[-/]+(?=\s)|\.|\?'
+  # Note: Additional plugins (RSS, git-revision-date-localized, tags) require installation:
+  # pip install mkdocs-rss-plugin mkdocs-git-revision-date-localized-plugin mkdocs-material[recommended]
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+      title: On this page
+      toc_depth: 2
+  - pymdownx.keys
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: getting-started/index.md
+    - Quick Setup: getting-started/quick-setup.md
+    - System Requirements: getting-started/requirements.md
+  - Simphony Configuration:
+    - Prerequisites: simphony-configuration/prerequisites.md
+    - STS Setup: simphony-configuration/sts-setup.md
+    - EMC Configuration: simphony-configuration/emc-configuration.md
+  - Admin Portal:
+    - Overview: admin-portal/overview.md
+  - Mobile App:
+    - Overview: mobile-app/overview.md
+    - Device Setup & Configuration: mobile-app/device-setup.md
+    - Daily Operations: mobile-app/daily-operations.md
+    - Payment Processing: mobile-app/payment-processing.md
+    - Device Management & Security: mobile-app/device-management.md
+  - Deep Dive:
+    - Design Philosophy: deep-dive/design-philosophy.md
+    - System Architecture: deep-dive/system-architecture.md
+    - Security Architecture: deep-dive/security-architecture.md
+    - Distributed Systems: deep-dive/performance-distributed.md
+  - Changelog:
+    - Overview: changelog/index.md
+    - Mobile App: changelog/mobile-app.md
+    - Admin Portal: changelog/admin-portal.md
+    - Documentation Site: changelog/docs-site.md
+  - Reference:
+    - Glossary: reference/glossary.md
+    - Troubleshooting: reference/troubleshooting.md
+    - AI-Enhanced Documentation: reference/ai-enhanced-documentation.md

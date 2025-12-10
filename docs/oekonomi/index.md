@@ -1,3 +1,12 @@
+---
+tags:
+  - økonomi
+  - fakturering
+  - regnskab
+  - C5
+  - Business Central
+---
+
 # Økonomi
 
 ## Oversigt
@@ -41,6 +50,3 @@
 
 Fakturering bør ske i det system der kender arrangementet (Opera), ikke i økonomi. Økonomi bør fokusere på bogføring, kontoafstemning og indbetalinger.
 
-## Kilder
-
-- Møde 26. november 2025

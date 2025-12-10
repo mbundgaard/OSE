@@ -1,3 +1,13 @@
+---
+tags:
+  - konference
+  - booking
+  - Picasso
+  - Picanto
+  - køresedler
+  - tilbud
+---
+
 # Konference
 
 ## Oversigt
@@ -44,6 +54,3 @@ Ca. 8 medarbejdere (sidder sammen med Event).
 - Når arrangementer involverer både konference og messe, er der uklarhed om ansvar (f.eks. hvem bestiller ekstra stole)
 - Personale skal konsultere både køresedler (fra Picanto) og projektmanualer (fra Messe)
 
-## Kilder
-
-- Møde 26. november 2025

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <!-- Feedback Widget CSS -->
+  <link rel="stylesheet" href="{{ 'css/feedback-widget.css' | url }}">
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <!-- Feedback Widget JavaScript -->
+  <script src="{{ 'js/feedback-widget.js' | url }}"></script>
+{% endblock %}

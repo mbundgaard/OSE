@@ -1,3 +1,12 @@
+---
+tags:
+  - messe
+  - udstilling
+  - projektmanual
+  - C5
+  - fakturering
+---
+
 # Messe
 
 ## Oversigt
@@ -56,6 +65,3 @@ Ca. 10 medarbejdere.
 
 Afdelingen skal over på samme system som konference. De er åbne for forandring og "modne til at der skal ske noget".
 
-## Kilder
-
-- Møde 26. november 2025

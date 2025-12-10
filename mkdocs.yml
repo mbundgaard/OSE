@@ -1,9 +1,10 @@
 site_name: Vidensbank
-site_description: Dokumentation af arbejdsgange og processer for Odense Sport & Event
+site_description: Vidensbank med dokumentation af arbejdsgange og processer for Odense Sport & Event
 site_url: https://ose.muneris.dk
 
 theme:
   name: material
+  custom_dir: overrides
   language: da
   logo: assets/images/logo.png
   favicon: assets/images/logo.png
@@ -47,6 +48,7 @@ theme:
 plugins:
   - search:
       lang: da
+  - tags
 
 nav:
   - Hjem: index.md
@@ -56,6 +58,9 @@ nav:
   - Hotel Odense: hotel-odense/index.md
   - F&B: fb/index.md
   - Økonomi: oekonomi/index.md
+  - Ændringslog: aendringslog/index.md
+  - Links: links.md
+  - Kontakt: kontakt.md
 
 markdown_extensions:
   - tables
@@ -85,6 +90,9 @@ extra:
     - icon: fontawesome/solid/globe
       link: https://www.ose.dk
       name: OSE Website
+    - icon: fontawesome/solid/envelope
+      link: mailto:martin@muneris.dk
+      name: Kontakt projektleder
   generator: false
 
 extra_css:
