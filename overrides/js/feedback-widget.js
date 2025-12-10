@@ -3,7 +3,7 @@
   'use strict';
 
   // Configuration
-  const ENDPOINT = 'http://localhost:7132/api/feedback';
+  const ENDPOINT = 'https://osefeedback.azurewebsites.net/api/feedback';
   const SUBMIT_DELAY = 2000;
   const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
   const MAX_FILES = 5;
