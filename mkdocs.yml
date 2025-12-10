@@ -1,6 +1,6 @@
-site_name: OCC Vidensbank
-site_description: Dokumentation af arbejdsgange og processer for Odense Congress Center
-site_url: https://example.github.io/occ-vidensbank/
+site_name: OSE Vidensbank
+site_description: Dokumentation af arbejdsgange og processer for Odense Sport & Event
+site_url: https://ose.muneris.dk
 
 theme:
   name: material

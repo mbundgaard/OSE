@@ -1,8 +1,10 @@
-# OCC Vidensbank - Projektkontekst
+# OSE Vidensbank
 
 ## Om projektet
 
-Dette er en vidensbank for Odense Congress Center (OCC) projektet. Formålet er at dokumentere arbejdsgange og processer som grundlag for implementering af nye systemer.
+Dette er en vidensbank for Odense Sport & Event (OS&E) projektet. Formålet er at dokumentere arbejdsgange og processer som grundlag for implementering af Oracle Opera Cloud (PMS) og Oracle Simphony (POS).
+
+Vidensbanken publiceres til GitHub Pages: https://mbundgaard.github.io/OSE/
 
 ## Projektparter
 
@@ -31,16 +33,63 @@ Dette er en vidensbank for Odense Congress Center (OCC) projektet. Formålet er 
 - Hotel Odeon (Strawberry/Mews)
 - Stella Maris (Picasso-kontrakt til 2028)
 
-## Mappestruktur
+## Repo-struktur
 
-Hver afdeling har sin egen mappe med dokumentation af arbejdsgange:
+```
+/
+├── docs/                  # Kildefiler til MkDocs (publiceres)
+│   ├── index.md           # Forside
+│   ├── konference/        # Konferenceafdelingen
+│   ├── messe/             # Messeafdelingen
+│   ├── event/             # Eventafdelingen
+│   ├── hotel-odense/      # Hotel Odense (Best Western Plus)
+│   ├── fb/                # Food & Beverage
+│   └── oekonomi/          # Økonomiafdelingen
+├── working/               # Arbejdsdokumenter (publiceres IKKE)
+│   ├── transcripts/       # Mødetransskriptioner
+│   ├── interviews/        # Interview-noter
+│   └── meeting-notes/     # Mødereferater
+├── mkdocs.yml             # MkDocs konfiguration
+├── CLAUDE.md              # Denne fil (ignoreres af git)
+└── .github/workflows/     # Automatisk deploy
+```
 
-- `/konference` - Konferenceafdelingen
-- `/messe` - Messeafdelingen  
-- `/event` - Eventafdelingen
-- `/hotel-odense` - Hotel Odense (Best Western Plus)
-- `/fb` - Food & Beverage
-- `/oekonomi` - Økonomiafdelingen
+## MkDocs
+
+Sitet bygges med MkDocs og Material-temaet. GitHub Actions bygger og deployer automatisk ved push til main.
+
+### Lokal preview (valgfrit)
+```bash
+pip install mkdocs-material
+mkdocs serve
+```
+
+### Navigation
+Navigationen defineres i `mkdocs.yml` under `nav:`. Når nye sider tilføjes, skal de også tilføjes her.
+
+### Nye dokumenter
+- Dokumenter der skal publiceres: Opret i `docs/` mappen
+- Arbejdsdokumenter: Opret i `working/` mappen
+- Filnavne: Brug `index.md` for hovedsiden i en mappe, ellers beskrivende navne med bindestreg
+
+## Arbejdsmetode
+
+Dokumenterne opdateres løbende baseret på:
+- Mødereferater
+- Transskriptioner fra interviews
+- Observationer fra besøg
+
+### Workflow
+1. Arbejdsdokumenter (transcripts, noter) placeres i `working/`
+2. Uddrag relevant information og opdater dokumenter i `docs/`
+3. Commit og push - GitHub Actions deployer automatisk
+4. Hver proces dokumenteres i den afdeling der ejer den
+
+### Når du opdaterer dokumentation
+- Læs eksisterende indhold først
+- Bevar struktur og overskrifter
+- Tilføj kilde nederst (f.eks. "Møde 26. november 2025")
+- Marker usikker information med "afventer bekræftelse" eller lignende
 
 ## Vigtige begreber
 
@@ -65,12 +114,3 @@ Hver afdeling har sin egen mappe med dokumentation af arbejdsgange:
 | Okt 2026 | Opstart konfiguration |
 | Jan 2027 | Go-live |
 | Efterår 2027 | Nye værelser åbner (380 stk.) |
-
-## Arbejdsmetode
-
-Dokumenterne opdateres løbende via Claude Code baseret på:
-- Mødereferater
-- Transskriptioner fra interviews
-- Observationer fra besøg
-
-Hver proces dokumenteres i den afdeling der ejer den.
