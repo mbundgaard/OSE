@@ -3,12 +3,16 @@
   'use strict';
 
   // Configuration
-  const ENDPOINT = 'https://formspree.io/f/mzznjagl';
+  const ENDPOINT = 'http://localhost:7132/api/feedback';
   const SUBMIT_DELAY = 2000;
+  const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
+  const MAX_FILES = 5;
+  const ALLOWED_TYPES = '.png,.jpg,.jpeg,.gif,.pdf,.docx,.xlsx,.txt,.md';
 
   // State
   let isSubmitting = false;
   let lastSubmitTime = 0;
+  let selectedFiles = [];
 
   // Initialize the feedback widget
   function init() {
@@ -37,6 +41,21 @@
                 id="feedback-url"
                 value="${window.location.href}"
               />
+
+              <div class="feedback-field">
+                <label class="feedback-label" for="feedback-name">
+                  Navn <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="feedback-name"
+                  class="feedback-input"
+                  placeholder="Dit navn"
+                  required
+                  aria-required="true"
+                />
+              </div>
 
               <div class="feedback-field">
                 <label class="feedback-label" for="feedback-subject">
@@ -68,18 +87,24 @@
               </div>
 
               <div class="feedback-field">
-                <label class="feedback-label" for="feedback-email">
-                  Email <span class="required">*</span>
+                <label class="feedback-label">
+                  Vedhæft filer <span class="optional">(valgfrit)</span>
                 </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="feedback-email"
-                  class="feedback-input"
-                  placeholder="din@email.dk"
-                  required
-                  aria-required="true"
-                />
+                <div class="feedback-file-upload">
+                  <input
+                    type="file"
+                    id="feedback-files"
+                    class="feedback-file-input"
+                    multiple
+                    accept="${ALLOWED_TYPES}"
+                  />
+                  <label for="feedback-files" class="feedback-file-label">
+                    <span class="feedback-file-icon">📎</span>
+                    <span>Vælg filer</span>
+                  </label>
+                  <div class="feedback-file-list"></div>
+                  <div class="feedback-file-hint">Max ${MAX_FILES} filer, ${MAX_FILE_SIZE / 1024 / 1024} MB per fil</div>
+                </div>
               </div>
 
               <button type="submit" class="feedback-submit">
@@ -105,16 +130,18 @@
     const submitBtn = document.querySelector('.feedback-submit');
     const message = document.querySelector('.feedback-message');
     const urlInput = document.querySelector('#feedback-url');
+    const nameInput = document.querySelector('#feedback-name');
     const subjectInput = document.querySelector('#feedback-subject');
     const commentInput = document.querySelector('#feedback-comment');
-    const emailInput = document.querySelector('#feedback-email');
+    const fileInput = document.querySelector('#feedback-files');
+    const fileList = document.querySelector('.feedback-file-list');
 
     // Event handlers
     function openPanel() {
       overlay.classList.add('active');
       panel.classList.add('active');
       document.body.style.overflow = 'hidden';
-      commentInput.focus();
+      nameInput.focus();
 
       // Update URL in case of SPA navigation
       urlInput.value = window.location.href;
@@ -129,6 +156,8 @@
       setTimeout(() => {
         form.reset();
         urlInput.value = window.location.href;
+        selectedFiles = [];
+        updateFileList();
         message.classList.remove('success', 'error');
         message.textContent = '';
         message.style.display = 'none';
@@ -142,9 +171,54 @@
       message.style.display = 'block';
     }
 
-    function validateForm() {
-      const subject = subjectInput.value.trim();
+    function updateFileList() {
+      fileList.innerHTML = selectedFiles.map((file, index) => `
+        <div class="feedback-file-item">
+          <span class="feedback-file-name">${file.name}</span>
+          <button type="button" class="feedback-file-remove" data-index="${index}">&times;</button>
+        </div>
+      `).join('');
 
+      // Add remove handlers
+      fileList.querySelectorAll('.feedback-file-remove').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const index = parseInt(e.target.dataset.index);
+          selectedFiles.splice(index, 1);
+          updateFileList();
+        });
+      });
+    }
+
+    function handleFileSelect(e) {
+      const files = Array.from(e.target.files);
+
+      for (const file of files) {
+        if (selectedFiles.length >= MAX_FILES) {
+          showMessage(`Max ${MAX_FILES} filer tilladt.`, 'error');
+          break;
+        }
+        if (file.size > MAX_FILE_SIZE) {
+          showMessage(`${file.name} er for stor (max ${MAX_FILE_SIZE / 1024 / 1024} MB).`, 'error');
+          continue;
+        }
+        if (!selectedFiles.some(f => f.name === file.name)) {
+          selectedFiles.push(file);
+        }
+      }
+
+      updateFileList();
+      fileInput.value = ''; // Reset input
+    }
+
+    function validateForm() {
+      const name = nameInput.value.trim();
+      if (!name) {
+        showMessage('Indtast venligst dit navn.', 'error');
+        nameInput.focus();
+        return false;
+      }
+
+      const subject = subjectInput.value.trim();
       if (!subject) {
         showMessage('Indtast venligst et emne.', 'error');
         subjectInput.focus();
@@ -152,31 +226,13 @@
       }
 
       const comment = commentInput.value.trim();
-
       if (!comment) {
         showMessage('Skriv venligst din feedback inden du sender.', 'error');
         commentInput.focus();
         return false;
       }
 
-      const email = emailInput.value.trim();
-      if (!email) {
-        showMessage('Indtast venligst din email.', 'error');
-        emailInput.focus();
-        return false;
-      }
-
-      if (!isValidEmail(email)) {
-        showMessage('Indtast venligst en gyldig email.', 'error');
-        emailInput.focus();
-        return false;
-      }
-
       return true;
-    }
-
-    function isValidEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
     async function submitFeedback(e) {
@@ -203,33 +259,35 @@
       try {
         const formData = new FormData(form);
 
-        const response = await fetch(ENDPOINT, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
+        // Add files
+        selectedFiles.forEach(file => {
+          formData.append('files', file);
         });
 
-        if (response.ok) {
-          showMessage('Tak for din feedback! Vi sætter pris på dit input.', 'success');
+        const response = await fetch(ENDPOINT, {
+          method: 'POST',
+          body: formData
+        });
+
+        let result = {};
+        try {
+          result = await response.json();
+        } catch {
+          // Response might not be JSON
+        }
+
+        if (response.ok && result.success) {
+          showMessage('Tak for din feedback!', 'success');
           lastSubmitTime = Date.now();
 
-          // Clear form after success
-          setTimeout(() => {
-            subjectInput.value = '';
-            commentInput.value = '';
-            emailInput.value = '';
-          }, 1000);
-
           // Auto-close after success
-          setTimeout(closePanel, 3000);
+          setTimeout(closePanel, 2000);
         } else {
-          throw new Error(`HTTP ${response.status}`);
+          throw new Error(result.message || `Server fejl (${response.status})`);
         }
       } catch (error) {
         console.error('Feedback submission error:', error);
-        showMessage('Beklager, noget gik galt. Prøv venligst igen senere.', 'error');
+        showMessage(error.message || 'Beklager, noget gik galt. Prøv venligst igen senere.', 'error');
       } finally {
         isSubmitting = false;
         submitBtn.disabled = false;
@@ -242,6 +300,7 @@
     closeBtn.addEventListener('click', closePanel);
     overlay.addEventListener('click', closePanel);
     form.addEventListener('submit', submitFeedback);
+    fileInput.addEventListener('change', handleFileSelect);
 
     // Escape key to close
     document.addEventListener('keydown', (e) => {
